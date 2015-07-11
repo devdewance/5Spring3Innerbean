@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- 
+	<bean id="person" class="com.test.Person">
+		<property name="name" value="PARASHAR"></property>
+		<property name="age" value="23"></property>
+		<property name="address" value="125 b BLOCK"></property>
+	</bean>
+	
+	
+	<bean id="customer" class="com.test.Customer">
+		<property name="person" ref="person"></property>
+	</bean> -->
+	
+	<bean id="customer" class="com.test.Customer">
+		<property name="person">
+		
+		<bean class="com.test.Person">
+			<property name="name" value="PARASHAR"></property>
+			<property name="age" value="23"></property>
+			<property name="address" value="125 b BLOCK"></property>
+	   </bean>
+		
+		</property>
+	</bean>
+	
+	
+</beans>
